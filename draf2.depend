@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1641765439 source:c:\users\robbi\desktop\web dev\draft\draf2\main.cpp
+	<iostream>
+	<Windows.h>
+	<cstdint>
+	<vector>
+	<Macro.h>
+
+1641765558 c:\users\robbi\desktop\web dev\draft\draf2\include\macro.h
+	<iostream>
+	<Windows.h>
+	<cstdint>
+	<vector>
+	<string>
+
+1641765997 source:c:\users\robbi\desktop\web dev\draft\draf2\src\macro.cpp
+
+1656739842 source:c:\users\robbi\desktop\web dev\ringer\main.cpp
+	<windows.h>
+	<stdio.h>
+	<unistd.h>
+
+1641843890 c:\users\robbi\desktop\web dev\ringer\include\macro.h
+	<iostream>
+	<Windows.h>
+	<cstdint>
+	<vector>
+	<string>
+
+1641769597 source:c:\users\robbi\desktop\web dev\ringer\src\macro.cpp
+
