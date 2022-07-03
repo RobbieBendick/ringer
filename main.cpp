@@ -1,24 +1,29 @@
 #include <windows.h>
-#include <stdio.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <iostream>
 
+using namespace std;
 
-int main( void )
-{
+int main() {
+  HWND hwnd = FindWindowA(NULL, "World of Warcraft");
 
-    HWND hwnd = FindWindowA(NULL, "World of Warcraft");
+  // random number between 1-12
+  int randomNumber = rand() % 12 + 1;
 
-    // random number between 1-12
-    int randomNumber = rand() % 12 + 1;
+  while (hwnd != NULL) {
+    // change the random number to a different random nubmer
+    randomNumber = rand() % 12 + 1;
 
-    // while the game process is running
-    while (hwnd != NULL) {
-        printf("%d", randomNumber);
-
-        // reset the random number to a different random number
-        randomNumber = rand() % 12 + 1;
-
-        sleep(randomNumber);
-    }
-    return 0;
+    // wait
+    sleep(randomNumber);
+    
+    // press the F key
+    // @params (virtualKeyCode, 0, KeyboardAction, 0)
+                       // keydown
+    keybd_event(0x46, 0, 0x0001, 0);
+                       // keyup
+    keybd_event(0x46, 0, 0x0002, 0);
+  }
+  return 0;
 }
